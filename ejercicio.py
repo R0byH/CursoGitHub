@@ -4,19 +4,19 @@ ventana = Frame(height=250,width=450)
 ventana.pack(padx=5,pady=5)
 
 def sumar():
-   resultado= 0
+   resultado= int(numero1.get())+int(numero2.get())
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
  
 def restar():
-   resultado= 0
+   resultado= int(numero1.get())-int(numero2.get())
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
 
 def multiplicar():
-   resultado= 0
+   resultado= int(numero1.get())*int(numero2.get())
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
 
 def dividir():
-   resultado= 0
+   resultado= int(numero1.get())/int(numero2.get())
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
 
 resultado=0
