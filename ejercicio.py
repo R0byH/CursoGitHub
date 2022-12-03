@@ -16,13 +16,12 @@ def multiplicar():
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
 
 def dividir():
-   if(int(numero2.get())==0):
-         Label(text="siga participando",font=("Broadway",15),fg="blue").place(x=200,y=160)
-          
-   else: 
+      if (int(numero2.get())!=0):
          resultado= int(numero1.get())/int(numero2.get())
          Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
-      
+      else:
+         Label(text="no se puede",font=("Broadway",15),fg="blue").place(x=200,y=160)
+   
 
 resultado=0
 numero1 = IntVar()
