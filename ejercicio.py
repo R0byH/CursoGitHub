@@ -1,6 +1,6 @@
 from tkinter import *
 import tkinter
-ventana = Frame(height=250,width=450)
+ventana = Frame(height=250,width=500)
 ventana.pack(padx=5,pady=5)
 
 def sumar():
@@ -16,8 +16,11 @@ def multiplicar():
    Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
 
 def dividir():
-   resultado= int(numero1.get())/int(numero2.get())
-   Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
+    try:
+        resultado = int(numero1.get())/int(numero2.get())
+        Label(text=resultado,font=("Broadway",15),fg="blue").place(width=50,x=200,y=160)
+    except ZeroDivisionError:
+        Label(text="Ups!, la división no puede realizarse",font=("Broadway",15),fg="blue").place(x=50,y=160)
 
 resultado=0
 numero1 = IntVar()
